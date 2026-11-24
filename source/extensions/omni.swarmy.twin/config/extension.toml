@@ -1,0 +1,31 @@
+[package]
+version = "1.0.0"
+title = "Swarmy Factory Twin"
+description = "Digital twin of Swarmy's North Georgia Plant — layout & process visualization for OpenUSD / Omniverse Kit."
+authors = ["Swarmy Digital Engineering"]
+category = "Simulation"
+keywords = ["digital twin", "factory", "openusd", "manufacturing", "drone", "simready", "swarmy"]
+readme = "docs/README.md"
+repository = ""
+icon = "data/icon.png"
+preview_image = "data/preview.png"
+
+[package.target]
+kit = ["106.0"]
+
+[dependencies]
+"omni.kit.uiapp" = {}
+"omni.usd" = {}
+"omni.kit.menu.utils" = {}
+"omni.kit.viewport.utility" = {}
+"omni.timeline" = {}
+
+[[python.module]]
+name = "omni.swarmy.twin"
+
+[settings]
+# path resolved at runtime relative to the extension root
+exts."omni.swarmy.twin".stage_path = "../../../usd/DroneFactory.usd"
+
+[[test]]
+args = ["--/app/window/dpiScaleOverride=1.0"]
