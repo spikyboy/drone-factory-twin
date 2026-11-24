@@ -1,0 +1,5 @@
+# Python deps for (re)generating and validating the twin offline (no GPU needed).
+# The Omniverse Kit runtime itself is installed separately (see README > Deploy).
+usd-core>=24.05
+numpy>=1.24
+matplotlib>=3.7        # floor-plan preview only
